@@ -17,7 +17,6 @@ class BaseTest(unittest.TestCase):
         cls.wait = WebDriverWait(cls.driver, 30)
         cls.driver.maximize_window()
         cls.router = Router(cls.driver, os.getenv('host'))
-        cls.router.navigate('/')
 
     def setUp(self):
         pass
