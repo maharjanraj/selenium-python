@@ -11,6 +11,7 @@ class GoogleLoginTests(BaseTest):
         self.recovery_email = os.getenv('gmail_recovery_email')
 
     def test_google_login(self):
+        self.driver.get('https://google.com')
         login_page = LoginPage(self.driver)
         login_page.login_using_google(
             self.email, self.password, self.recovery_email)
